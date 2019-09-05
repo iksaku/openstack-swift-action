@@ -1,6 +1,7 @@
-FROM python:3.7-alpine
+FROM python:2.7
 
-RUN pip install --no-cache-dir python-swiftclient
+RUN apt update
+RUN apt install python-swiftclient python-keystoneclient -y
 
 COPY README.md /
 
