@@ -6,12 +6,13 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: iksaku/openstack-swift-action@master
+      - uses: actions/checkout@v1
+      - name: Test File Listing
+        uses: ./
         env:
           OS_AUTH_URL: ${{ secrets.AUTH_URL }}
           OS_REGION_NAME: ${{ secrets.REGION }}
           OS_TENANT_ID: ${{ secrets.TENANT_ID }}
           OS_USERNAME: ${{ secrets.USERNAME }}
           OS_PASSWORD: ${{ secrets.PASSWORD }}
-      - name: Test File Listing
-        run: swift list openstack-swift-action
+        args: swift list openstack-swift-action
