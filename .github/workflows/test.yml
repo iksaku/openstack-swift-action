@@ -15,4 +15,5 @@ jobs:
           OS_TENANT_ID: ${{ secrets.TENANT_ID }}
           OS_USERNAME: ${{ secrets.USERNAME }}
           OS_PASSWORD: ${{ secrets.PASSWORD }}
-        args: swift list openstack-swift-action
+        with:
+          args: swift list openstack-swift-action
