@@ -1,0 +1,17 @@
+name: CI
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: ./
+        env:
+          OS_AUTH_URL: ${{ secrets.AUTH_URL }}
+          OS_REGION_NAME: ${{ secrets.REGION }}
+          OS_TENANT_ID: ${{ secrets.TENANT }}
+          OS_USERNAME: ${{ secrets.USERNAME }}
+          OS_PASSWORD: ${{ secrets.PASSWORD }}
+      - name: Test File Listing
+        run: swift list openstack-swift-action
