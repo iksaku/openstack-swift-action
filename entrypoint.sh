@@ -1,6 +1,6 @@
 #!/bin/sh
+swift auth > /dev/null 2>&1
 
-swift auth &>/dev/null
 
 if [ $? -ne 0 ]; then
     echo "[Error] Unable to authenticate against Swift provider."
