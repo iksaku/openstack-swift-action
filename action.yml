@@ -1,0 +1,8 @@
+name: OpenStack Swift Action
+description: Github Action that helps managing files with OpenStack Swift compatible services
+branding:
+  icon: 'database'
+  color: 'red'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
