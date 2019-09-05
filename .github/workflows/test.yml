@@ -10,7 +10,7 @@ jobs:
         env:
           OS_AUTH_URL: ${{ secrets.AUTH_URL }}
           OS_REGION_NAME: ${{ secrets.REGION }}
-          OS_TENANT_ID: ${{ secrets.TENANT }}
+          OS_TENANT_ID: ${{ secrets.TENANT_ID }}
           OS_USERNAME: ${{ secrets.USERNAME }}
           OS_PASSWORD: ${{ secrets.PASSWORD }}
       - name: Test File Listing
