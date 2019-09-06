@@ -9,6 +9,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v1
+      - name: Print Swift Version
+        uses: ./
+        with:
+          auth-check: false
+          args: --version
       - name: Test File Listing
         uses: ./
         env:

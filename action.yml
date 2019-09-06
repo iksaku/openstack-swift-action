@@ -4,6 +4,11 @@ author: Jorge González
 branding:
   icon: database
   color: red
+inputs:
+  auth-check:
+    description: Executes an authentication check against your service provider before running your command.
+    required: false
+    default: true
 runs:
   using: docker
   image: docker://iksaku/openstack-swift-container:stein
