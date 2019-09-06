@@ -1,8 +1,9 @@
 name: OpenStack Swift Action
-description: Github Action that helps managing files with OpenStack Swift compatible services
+description: Github Action that integrates OpenStack's Swift to manage compatible service providers.
+author: Jorge González
 branding:
-  icon: 'database'
-  color: 'red'
+  icon: database
+  color: red
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
+  using: docker
+  image: docker://iksaku/openstack-swift-container:stein
