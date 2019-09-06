@@ -7,7 +7,7 @@ jobs:
     name: Swift Connection
     runs-on: ubuntu-latest
     steps:
-      - name: Git Checkout
+      - name: Checkout
         uses: actions/checkout@v1
       - name: Test File Listing
         uses: ./
