@@ -12,7 +12,7 @@ jobs:
       - name: Print Swift Version
         uses: ./
         with:
-          auth-check: false
+          auth_check: false
           args: --version
       - name: Test File Listing
         uses: ./

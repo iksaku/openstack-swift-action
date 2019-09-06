@@ -36,13 +36,13 @@ It uses my personal docker image [`openstack-swift-container`](https://hub.docke
 
   If your credentials are not valid nor setup properly, the image will halt execution and provide an error message.
 
-  If you don't want to run an authentication check before your command, you can supress this behaviour by passing a `false` value to action's `auth-check` input:
+  If you don't want to run an authentication check before your command, you can supress this behaviour by passing a `false` value to action's `auth_check` input:
   ```yaml
   steps:
     ...
     - uses: iksaku/openstack-swift-action@master
       with:
-        auth-check: false
+        auth_check: false
         args: --version
     ...
   ```

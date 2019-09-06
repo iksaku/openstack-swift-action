@@ -5,7 +5,7 @@ branding:
   icon: database
   color: red
 inputs:
-  auth-check:
+  auth_check:
     description: Executes an authentication check against your service provider before running your command.
     required: false
     default: true
