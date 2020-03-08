@@ -11,4 +11,4 @@ inputs:
     default: true
 runs:
   using: docker
-  image: docker://iksaku/openstack-swift-container:3.7.1
+  image: docker://iksaku/openstack-swift-container:3.8.1
