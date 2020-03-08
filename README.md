@@ -7,17 +7,18 @@ It uses my personal docker image [`openstack-swift-container`](https://hub.docke
 
 ## Usage
 * ### Basic Usage
-  Assume have all our `Keystone v2` credentials stored in our repo's Secrets. We must pass them in form of environment variables to the action in order to authenticate against our service provier:
+  Assume have all our `Keystone` credentials stored in our repo's Secrets. We must pass them in form of environment variables to the action in order to authenticate against our service provier:
   ```yaml
   steps:
     ...
     - uses: iksaku/openstack-swift-action@master
       env:
         OS_AUTH_URL: ${{ secrets.AUTH_URL }}
-        OS_REGION_NAME: ${{ secrets.REGION }}
-        OS_TENANT_ID: ${{ secrets.TENANT_ID }}
-        OS_USERNAME: ${{ secrets.USERNAME }}
         OS_PASSWORD: ${{ secrets.PASSWORD }}
+        OS_PROJECT_NAME: ${{ secrets.PROJECT_NAME }}
+        OS_REGION_NAME: ${{ secrets.REGION_NAME }}
+        OS_USERNAME: ${{ secrets.USERNAME }}
+        OS_USER_DOMAIN_NAME: ${{ secrets.USER_DOMAIN_NAME }}
       with:
         args: list openstack-swift-action
     ...
